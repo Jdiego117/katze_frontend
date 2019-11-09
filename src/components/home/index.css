@@ -1,0 +1,169 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.index {
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	background:linear-gradient(to bottom, #32adff 0%, #0178ff 100%);
+}
+
+.index .logo {
+	display: flex;
+	color: #000;
+	font-size: 10rem;
+	justify-content: center;
+	align-items: center;
+}
+
+.index .form {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.index .form .register {
+	background-color: #FFF;
+	border-radius: 2px;
+	box-shadow: 10px 10px 20px 3px rgba(0,0,0,0.66);
+	width: 90%;
+	margin: 0 auto;
+
+	display: none;
+}
+
+.index .form .register h1, div {
+	padding: 10px 15px;
+	margin: 0;
+}
+
+.index .form .register > div input {
+	position:relative;
+	z-index:2;
+	border:none;
+	border-radius:30px;
+	box-shadow:0 2px 15px -3px #bfbfbf;
+	width: 95%;
+	margin: 0px auto; 
+	height: 30px;
+} 
+
+.index .form .register > div b {
+	cursor: pointer;
+}
+
+.index .form .register .error {
+	width: 90%;
+	margin: 0px auto;
+	color: #FFF;
+	background-color: #dc3545;
+	border-radius: 4px;
+	box-shadow:0 2px 15px -3px #bfbfbf;
+
+	display: none;
+}
+
+.check {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	width: 100%;
+	color: #419641;
+	font-size: 4em;
+}
+
+.check div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.check div i {
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+
+.check p {
+	grid-column-start: 2;
+	grid-column-end: 5;
+	font-size: 2rem;
+}
+
+.input_code {
+	width: 100%;
+}
+
+.input_code input {
+	position:relative;
+	z-index:2;
+	border:none;
+	border-radius:30px;
+	box-shadow:0 2px 15px -3px #bfbfbf;
+	width: 95%;
+	margin: 0px auto; 
+	height: 30px;
+}
+
+.index .form .login {
+	background-color: #FFF;
+	border-radius: 2px;
+	box-shadow: 10px 10px 20px 3px rgba(0,0,0,0.66);
+	width: 90%;
+	margin: 0 auto;
+
+	display: none;
+}
+
+.index .form .login h1, div {
+	padding: 10px 15px;
+	margin: 0;
+}
+
+.index .form .login > div input {
+	position:relative;
+	z-index:2;
+	border:none;
+	border-radius:30px;
+	box-shadow:0 2px 15px -3px #bfbfbf;
+	width: 95%;
+	margin: 0px auto; 
+	height: 30px;
+} 
+
+.index .form .login > div b {
+	cursor: pointer;
+}
+
+.index .form .login .error {
+	width: 90%;
+	margin: 0px auto;
+	color: #FFF;
+	background-color: #dc3545;
+	border-radius: 4px;
+	box-shadow:0 2px 15px -3px #bfbfbf;
+
+	display: none;
+}
+
+.date {
+	display: flex;
+}
+
+.date input {
+	width: 
+	65% !important;
+}
+
+.resend_code {
+	cursor: pointer;
+}

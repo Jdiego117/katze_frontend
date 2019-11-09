@@ -1,0 +1,78 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.content_maker {
+	width: 95%;
+	height: 74vh;
+	margin: 5% auto;
+	overflow: hidden;
+
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 5%;
+}
+
+.gallery {
+	background-color: #FFF;
+	box-shadow: 10px 11px 5px -4px rgba(0,0,0,0.29);
+	border-radius: 4px;
+
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: .2fr auto;
+	grid-gap: 10px;
+	overflow-y: scroll;
+	max-height: 70vh !important;
+}
+
+.gallery .title {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	height: 10%;
+}
+
+.gallery .title h2 {
+	cursor: pointer;
+}
+
+.gallery .img {
+	background-image: url("https://www.culturafinanciera.org/wp-content/uploads/2014/09/finland-1920x1080.jpg");
+	background-position: center center;
+	background-size: cover;
+	box-shadow: 10px 11px 5px -4px rgba(0,0,0,0.29);
+	height: 100px;
+}
+
+.publication_maker {
+	background-color: #FFF;
+	box-shadow: 10px 11px 5px -4px rgba(0,0,0,0.29);
+	border-radius: 4px;
+	display: grid;
+	grid-template-rows: 10vh 50vh 10vh;
+	max-height: 70vh;
+}
+
+.publication_maker .opts {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	max-height: 30%;
+}
+
+
+.checkbox {
+	width: auto !important;
+	background: transparent !important;
+	height: auto;
+}
+
+.alert-danger {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+.alert-success {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}

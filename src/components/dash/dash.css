@@ -1,0 +1,734 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#app {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+.nav {
+	width: 100%;
+	border-bottom: 1px solid #bfbfbf;
+
+	display: grid;
+	grid-template-columns: minmax(0, 400px) minmax(0, 400px) minmax(0, 400px);
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	max-height: 10vh;
+}
+
+.nav > div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 7vh;
+}
+
+.nav .logo {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	cursor: pointer;
+}
+
+.nav .logo i, .nav .logo svg {
+	font-size: 2em;
+	margin-right: .5em;
+}
+
+.search{
+	display: grid!important;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr auto!important;
+	height: auto!important;
+}
+
+.search input {
+	width: 100%!important;
+}
+
+.results {
+	border:none;
+	background-color: #FFF;
+	box-shadow:0 2px 15px -3px #bfbfbf;
+	padding: 0;
+	grid-row-start: 2;
+	overflow-y: scroll;
+	max-height: 200px;
+}
+
+.result {
+	height: 50px;
+	width: 100%;
+	padding: 0;
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+}
+
+.result a {
+	color: #000;
+	text-decoration: none;
+}
+
+.result:hover {
+	background-color: rgba(51,51,51, .8);
+}
+
+.result > div {
+	display: flex;
+	align-items: center;
+	height: 50px;
+}
+
+.result .pic .photo {
+	background-image: url("https://www.picmonkey.com/blog/wp-content/uploads/2016/11/1-intro-photo-final.jpg");
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+
+	background-position: center;
+	background-size: cover;
+}
+
+.nav .btns > div i, .nav .btns > div svg {
+	font-size: 1.7em;
+	margin: .5em;
+	color: #3b3b3b;
+	cursor: pointer;
+}
+
+.noti_drop {
+	position: fixed;
+	top: 65px;
+	right: 22%;
+	width: 20%;
+	border: 1px solid #000;
+	z-index: 99;
+	display: none;
+}
+
+.light-bar {
+	background-color: #FFFF;
+}
+
+.dark-bar {
+	background-color: #5c3b39;
+}
+
+.background-light {
+	background-color: #fafafa;
+}
+
+.background-dark {
+	background-color: #1a0f0f;
+}
+
+.main {
+	width: 90%;
+	margin: 10px auto;
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	grid-gap: 100px;
+}
+
+.main .content {
+	margin-top: 100px;
+}
+
+.main .side {
+	position: fixed;
+	right: 10%;
+	top: 50px;
+	right: 0;
+}
+
+.main .side .side_profile {
+	display: grid;
+	grid-template-columns: .5fr 1fr 1fr;
+	height: 52px;
+}
+
+.main .side .side_profile > div {
+	display: flex;
+	align-items: center;
+}
+
+.main .side .side_profile .profile_photo .pic {
+	background-image: url("https://www.picmonkey.com/blog/wp-content/uploads/2016/11/1-intro-photo-final.jpg");
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+
+	background-position: center;
+	background-size: cover;
+}
+
+.main .side .side_profile .side_profile_name a {
+	color: #000;
+	text-decoration: none;
+	font-size: 1.2em;
+}
+
+.main .side .side_story {
+	margin-top: 1em;
+	background-color: #ffff;
+	box-shadow: 10px 11px 5px -4px rgba(0,0,0,0.29);
+	border-radius: 4px;
+	min-height: 60px;
+	overflow: hidden;
+}
+
+.main .side .side_story h3 {
+	font-size: 1em;
+	padding: 10px 15px;
+}
+
+.main .side .side_story .side_story_p {
+	padding-left: 15px;
+	overflow-y: scroll;
+	max-height: 140px;
+}
+
+.main .side .side_story .side_story_p .story {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(5, 1fr);
+	height: 50px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.main .side .side_story .side_story_p .story:hover {
+	cursor: pointer;
+}
+
+.main .side .side_story .side_story_p .story > div {
+	display: flex;
+	align-items: center;
+}
+
+.main .side .side_story .side_story_p .story .profile_photo {
+	background-image: url("https://www.picmonkey.com/blog/wp-content/uploads/2016/11/1-intro-photo-final.jpg");
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+
+	background-position: center;
+	background-size: cover;
+}
+
+.main .side .side_story .side_story_p .story .side_profile_name {
+	grid-column-start: 2;
+	grid-column-end: 6;
+}
+
+.main .side .side_suggest {
+	margin-top: 1em;
+	background-color: #ffff;
+	box-shadow: 10px 11px 5px -4px rgba(0,0,0,0.29);
+	border-radius: 4px;
+	min-height: 100px;
+}
+
+.main .side .side_suggest h3 {
+	font-size: 1em;
+	padding: 10px 15px;
+}
+
+.main .side .side_suggest .side_suggested {
+	padding-left: 15px;
+	overflow-y: scroll;
+	max-height: 170px;
+}
+
+.main .side .side_suggest .side_suggested .suggest {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(5, 1fr);
+	height: 50px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.main .side .side_suggest .side_suggested .suggest:hover {
+	cursor: pointer;
+}
+
+.main .side .side_suggest .side_suggested .suggest > div {
+	display: flex;
+	align-items: center;
+}
+
+.main .side .side_suggest .side_suggested .suggest .profile_photo {
+	background-image: url("https://www.picmonkey.com/blog/wp-content/uploads/2016/11/1-intro-photo-final.jpg");
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+
+	background-position: center;
+	background-size: cover;
+}
+
+.main .side .side_suggest .side_suggested .suggest .side_profile_name {
+	grid-column-start: 2;
+	grid-column-end: 6;
+}
+
+.text_publication {
+	width: 80%;
+	margin: 0 auto;
+	background-color: #F6F6F6;
+	padding: 0;
+	border-radius: 4px;
+	box-shadow: 15px 27px 34px 1px rgba(0,0,0,0.35);
+	display: grid;
+	grid-template-columns: 1fr 5fr;
+}
+
+.text_publication .profile_pic {
+	display: flex;
+	justify-content: center;
+}
+
+.text_publication .profile_pic .pic {
+	background-image: url("https://www.picmonkey.com/blog/wp-content/uploads/2016/11/1-intro-photo-final.jpg");
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	background-position: center;
+	background-size: cover;
+}
+
+.text_publication .content_text {
+	display: grid;
+	grid-template-rows: 1fr minmax(1fr, 4fr) 1fr;
+	padding: 0;
+}
+
+.text_publication .content_text .author_name {
+	display: flex;
+	align-items: center;
+}
+
+.text_publication .content_text .text {
+	max-height: 20vh;
+	padding-bottom: 20px;
+	overflow-y: scroll;
+}
+
+.text_publication .content_text .btn {
+	display: flex;
+	align-items: center;
+}
+
+.text_publication .content_text .btn .send {
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	background: linear-gradient(to bottom, #eb4034 0%, #ff1100 100%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #FFFF;
+	font-size: 1.2em;
+	margin-right: 3px;
+	cursor: pointer;
+}
+
+.text_publication .content_text .btn .like {
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	background: linear-gradient(to bottom, #eb4034 0%, #ff1100 100%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #FFFF;
+	font-size: 1.2em;
+	margin-right: 3px;
+	cursor: pointer;
+}
+
+.text_publication .content_text .btn .share {
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	background: linear-gradient(to bottom, #eb4034 0%, #ff1100 100%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #FFFF;
+	font-size: 1.2em;
+	cursor: pointer;
+}
+
+.publication {
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+
+.publication .author {
+	display: grid;
+	grid-template-columns: 1fr 5fr;
+	margin: 0;
+	height: 40px;
+}
+
+.publication .author > div {
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+.publication .author .profile_pic {
+	
+}
+
+.publication .author .profile_pic .pic {
+	background-image: url("https://www.picmonkey.com/blog/wp-content/uploads/2016/11/1-intro-photo-final.jpg");
+	border-radius: 50%;
+	width: 45px;
+	height: 45px;
+	background-position: center;
+	background-size: cover;
+}
+
+.publication .author .author_name {
+}
+
+.publication .publication_content {
+	overflow: hidden;
+	margin: 0;
+	max-height: 50vh;
+	border-radius: 4px;
+	box-shadow: 15px 27px 34px 1px rgba(0,0,0,0.35);
+	position: relative;
+}
+
+.publication .publication_content img {
+	position: relative;
+	width: 110%;
+	height: 100%;
+	left: -5%;
+}
+
+.publication_img {
+	background-image: url("http://localhost/profile.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	min-height: 50vh;
+	max-height: 50vh;
+	top: 25px;
+}
+
+.publication .publication_text {
+	width: 95%;
+	margin: 0 auto;
+	background-color: #F6F6F6;
+}
+
+.publication .publication_text p {
+	padding: 12px;
+	margin: 0;
+	max-height: 20vh;
+	overflow-y: scroll;
+}
+
+.publication .publication_likes .line {
+	border-top: 2px solid #EBEBEB;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.publication .publication_likes p {
+	padding: 12px;
+	margin: 0px;
+	border-top: 2px solid #EBEBEB;
+	border-bottom: 2px solid #EBEBEB;
+}
+
+.publication .publication_likes p i, .publication .publication_likes p svg {
+	font-size: 1.5em;
+	color: #ff0505;
+}
+
+.publication .publication_likes {
+	width: 95%;
+	margin: 0 auto;
+	background-color: #F6F6F6;
+}
+
+.publication .publication_comments {
+	width: 95%;
+	margin: 0 auto;
+	background-color: #F6F6F6;
+	max-height: 20vh;
+	overflow-y: scroll;
+}
+
+.publication .publication_comments .comment {
+	height: 40px;
+}
+
+.publication .publication_comments .comment p {
+
+}
+
+.publication .publication_comments .comment p b {
+	margin-right: 3px;
+}
+
+.publication .publication_form {
+	width: 95%;
+	margin: 0 auto;
+	background-color: #F6F6F6;
+
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+}
+
+.publication .publication_form .input_text {
+	padding: 20px;
+	grid-column-start: 1;
+	grid-column-end: 5;
+}
+
+.publication .publication_form .input_text input {
+	position:relative;
+	z-index:2;
+	border:none;
+	height:40px;
+	width:100%;
+	border-radius:20px;
+	box-shadow:0 2px 15px -3px #bfbfbf;
+}
+
+.publication .publication_form .btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.publication .publication_form .btn .send {
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	background: linear-gradient(to bottom, #eb4034 0%, #ff1100 100%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #FFFF;
+	font-size: 1.2em;
+	margin-right: 3px;
+	cursor: pointer;
+}
+
+.publication .publication_form .btn .like {
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	background: linear-gradient(to bottom, #eb4034 0%, #ff1100 100%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #FFFF;
+	font-size: 1.2em;
+	margin-right: 3px;
+	cursor: pointer;
+}
+
+.publication .publication_form .btn .share {
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	background: linear-gradient(to bottom, #eb4034 0%, #ff1100 100%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #FFFF;
+	font-size: 1.2em;
+	cursor: pointer;
+}
+
+.publication_shadow {
+	background-color: #F6F6F6;
+	width: 95%;
+	margin: 0 auto;
+	box-shadow: 15px 27px 34px 1px rgba(0,0,0,0.35);
+}
+
+.profile_content {
+	width: 70%;
+	margin: 100px auto;
+}
+
+.profile_content .profile_info {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	grid-gap: 20px;
+}
+
+.profile_content .profile_info .profile_pic {
+	background-image: url("https://www.picmonkey.com/blog/wp-content/uploads/2016/11/1-intro-photo-final.jpg");
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+
+	background-position: center;
+	background-size: cover;
+}
+
+.profile_content .profile_info .info {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, .1fr);
+}
+
+.profile_content .profile_info .info > div {
+	display: flex;
+	align-items: center;
+}
+
+.profile_content .profile_info .info .profile_description {
+	grid-column: span 3;
+}
+
+.profile_storys {
+	width: 100%;
+	height: 22vh;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	overflow-x: scroll;
+	overflow-y: hidden;
+}
+
+.profile_storys .story {
+	width: 70px;
+	height: 80px;
+
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+	margin-right: 50px;
+}
+
+.profile_storys .story > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.profile_storys .story .story_img {
+	background-image: url("https://cdn.civitatis.com/francia/paris/guia/torre-eiffel-grid-m.jpg");
+	width: 60px;
+	height: 60px;
+	background-size: cover;
+	background-position: center;
+	border-radius: 50%;
+}
+
+.profile_line{
+	margin-top: 10px;
+	border-bottom: 2px solid #bfbfbf;
+}
+
+.profile_publication_options {
+	width: 40%;
+	margin: 0px auto;
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.profile_publication_options > div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2px;
+}
+.profile_publication_options > div:hover {
+	cursor: pointer;
+}
+
+.profile_publication_options > div i, .profile_publication_options > div svg {
+	font-size: 1em;
+	margin-right: 6px;
+}
+
+.profile_publication_options .selected {
+	border-top: 2px solid red;
+}
+
+.profile_publications {
+	margin-top: 40px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 30px;
+}
+
+.profile_publications .publication {
+	/*background-image: url("https://www.culturafinanciera.org/wp-content/uploads/2014/09/finland-1920x1080.jpg");*/
+	background-position: center center;
+	width: 100%;
+	height: 50vh;
+	box-shadow: 10px 11px 5px -4px rgba(0,0,0,0.29);
+}
+
+.profile_publications .publication_text {
+	background-color: #ccc;
+	background-position: center center;
+	width: 100%;
+	height: 50vh;
+	box-shadow: 10px 11px 5px -4px rgba(0,0,0,0.29);
+	overflow-y: scroll;
+}
+
+.profile_publications .publication .info {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	width: 100%;
+	height: 100%;
+	background-color: rgba(79, 79, 79, .5);
+}
+
+.profile_publications .publication .info > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.profile_publications .publication .info > div p {
+	margin: 0;
+	color: #FFFF;
+}
+
+.private {
+	font-size: 5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.private i {
+	margin-right: .5em;
+}
+
+.private p {
+	font-size: .5em;
+}
