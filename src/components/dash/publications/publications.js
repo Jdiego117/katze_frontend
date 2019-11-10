@@ -80,6 +80,16 @@ class Publications extends Component {
 	}
 
 	countLikes(id) {
+		var counter = Object.assign([], this.state.count);
+
+		for (var i = counter.length - 1; i >= 0; i--) {
+			if (counter[i].id == id) {
+				return (<div style={{display: 'inline-block'}}>{9}</div>)
+			}
+		}
+
+		return;
+
 		var url = API.url + '/CountPublicationLikes?id=' + id;
 		fetch(url, {
 	      headers: {
@@ -94,10 +104,11 @@ class Publications extends Component {
 	        	this.setRedirect();
 	        }
 	      } else {
-	      	return response.count;
+
 	      }
 	    });
 	}
+		//return (<div style={{display: 'inline-block'}}>9</div>);
 
 	render() {
 		const {content, token, users, count} = this.state;

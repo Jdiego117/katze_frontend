@@ -14,6 +14,7 @@ import ConfigProfile from './components/dash/myprofile/configprofile';
 import NewContent from './components/dash/contentmaker/new_content';
 import Profile from './components/dash/profile/profile';
 import Logout from './components/dash/logout';
+import Messenger from './components/messenger/messenger';
 
 
 import * as serviceWorker from './serviceWorker';
@@ -28,6 +29,7 @@ ReactDOM.render(
 	<Route path="/config" exact component={ConfigProfile} />
 	<Route path="/newContent" exact component={NewContent} />
 	<Route path="/profile/:nick" exact component={Profile} />
+	<Route path="/messenger/" exact component={Messenger} />
 	<Route path="/logout" exact component={Logout} />
 
 </Router>
